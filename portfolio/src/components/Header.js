@@ -1,8 +1,11 @@
 import React from 'react';
+import './Header.css';
+
 
 const Header = () => {
   return (
     <header>
+        <h1>Vlad Mladenov</h1>
       <nav>
         <ul>
           <li>

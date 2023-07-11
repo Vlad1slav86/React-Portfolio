@@ -1,31 +1,30 @@
-//import logo from './logo.svg';
 import React from 'react';
-import './App.css';
-import About from './components/About';
-import Contact from './components/Contact';
-import Content from './components/Content';
-import Footer from './components/Footer';
 import Header from './components/Header';
+import About from './components/About';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import Resume from './components/Resume';
-
-
-
-
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div>
       <Header />
-      <About />
-      <Portfolio />
-      <Content />
-      <Resume />
-      <Contact />
+      <div id="about">
+        <About />
+      </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+      <div id="resume">
+        <Resume />
+      </div>
       <Footer />
     </div>
   );
-};
-
+}
 
 export default App;

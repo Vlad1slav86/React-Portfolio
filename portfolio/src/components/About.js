@@ -2,9 +2,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <Section>
-      {'The most awesomest guy!'}
-    </Section>
+    <section>
+      'The most awesomest guy!
+    </section>
   );
 };
 
