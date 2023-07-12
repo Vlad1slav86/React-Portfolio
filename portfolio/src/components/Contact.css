@@ -1,0 +1,39 @@
+/* Contact.css */
+*{
+    
+}
+.contact-section {
+    padding: 20px;
+    background-color: #f2f2f2;
+   
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-content {
+    flex: 1;
+    
+    padding-left: 25px;
+  }
+  
+  .contact-section h2{
+    margin-right: 20px;
+  }
+  
+  .contact-content ul {
+    list-style: none;
+    padding: 30px;
+    border-left: 1px solid black;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: underline;
+    list-style-type: none;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  
+  
+  
