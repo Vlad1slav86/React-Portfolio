@@ -7,59 +7,60 @@ const Portfolio = () => {
       id: 1,
       image: '/images/Pear-Music.png',
       name: 'Pear Music',
-      repoUrl: 'https://vlad1slav86.github.io/Pear-Music/',
+      deployedUrl: 'https://vlad1slav86.github.io/Pear-Music/',
+      repoUrl: 'https://github.com/Vlad1slav86/Pear-Music/',
     },
     {
       id: 2,
       image: '/images/Shape-Shift.png',
       name: 'Shape Shift',
+      deployedUrl: 'https://vlad1slav86.github.io/Weather-App/',
       repoUrl: 'https://github.com/Vlad1slav86/Workout-Tracker',
     },
     {
       id: 3,
       image: '/images/Note-Taker.png',
       name: 'Note Taker',
+      deployedUrl: 'https://vlad1slav86.github.io/Note-Taker/',
       repoUrl: 'https://github.com/Vlad1slav86/Note-Taker',
     },
     {
       id: 4,
       image: '/images/Coding-quiz.png',
       name: 'Coding Quiz',
-      repoUrl: 'https://vlad1slav86.github.io/Coding-quiz/',
+      deployedUrl: 'https://vlad1slav86.github.io/Coding-quiz/',
+      repoUrl: 'https://github.com/Vlad1slav86/Coding-quiz/',
     },
     {
       id: 5,
       image: '/images/Planner-App.png',
       name: 'Planner App',
-      repoUrl: 'https://vlad1slav86.github.io/Planner-app/',
+      deployedUrl: 'https://vlad1slav86.github.io/Planner-app/',
+      repoUrl: 'https://github.com/Vlad1slav86/Planner-app/',
     },
     {
       id: 6,
       image: '/images/Weather-App.png',
       name: 'Weather App',
-      repoUrl: 'https://vlad1slav86.github.io/Weather-App/',
+      deployedUrl: 'https://vlad1slav86.github.io/Weather-App/',
+      repoUrl: 'https://github.com/Vlad1slav86/Weather-App/',
     },
-    // Add more projects here...
   ];
 
   return (
-    <section className="portfolio-section">
+    <section id="portfolio">
       <h2>Portfolio</h2>
       <div className="projects">
-        {projects.slice(0, 2).map((project) => (
-          <div key={project.id} className="project project-large">
-            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-              <img src={project.image} alt="Project" />
-              <div className="project-name">{project.name}</div>
+        {projects.map((project) => (
+          <div key={project.id} className="project">
+            <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer">
+              <img src={project.image} alt={project.title} />
             </a>
-          </div>
-        ))}
-        {projects.slice(2).map((project) => (
-          <div key={project.id} className="project project-small">
-            <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-              <img src={project.image} alt="Project" />
-              <div className="project-name">{project.name}</div>
-            </a>
+            <div className="project-title">{project.title}</div>
+            <div className="project-links">
+              <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer">Demo</a>
+              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
         ))}
       </div>

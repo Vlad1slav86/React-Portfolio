@@ -1,30 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Element } from 'react-scroll';
 import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+  const [activeSection, setActiveSection] = useState('about');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['about', 'portfolio', 'contact', 'resume'];
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 0;
+        }
+        return false;
+      });
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <Header />
-      <div id="about">
+      <Header activeSection={activeSection} />
+      <Element name="about">
         <About />
-      </div>
-      <div id="portfolio">
+      </Element>
+      <Element name="portfolio">
         <Portfolio />
-      </div>
-      <div id="contact">
+      </Element>
+      <Element name="contact">
         <Contact />
-      </div>
-      <div id="resume">
+      </Element>
+      <Element name="resume">
         <Resume />
-      </div>
-      <Footer />
+      </Element>
     </div>
   );
-}
+};
 
 export default App;

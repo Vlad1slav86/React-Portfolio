@@ -1,24 +1,78 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import './Header.css';
 
-
 const Header = () => {
+  const [activeSection, setActiveSection] = useState('about');
+  const [initialLoad, setInitialLoad] = useState(true);
+
+  const handleSetActive = (section) => {
+    setActiveSection(section);
+  };
+
+  useEffect(() => {
+    if (initialLoad) {
+      setActiveSection('about');
+      setInitialLoad(false);
+    }
+  }, [initialLoad]);
+
   return (
     <header>
-        <h1>Vlad Mladenov</h1>
+      <h1>Vlad Mladenov</h1>
       <nav>
         <ul>
           <li>
-            <a href="#about">About Me</a>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              active={activeSection === 'about'}
+              onSetActive={handleSetActive}
+            >
+              About Me
+            </Link>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <Link
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              active={activeSection === 'portfolio'}
+              onSetActive={handleSetActive}
+            >
+              Portfolio
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              active={activeSection === 'contact'}
+              onSetActive={handleSetActive}
+            >
+              Contact
+            </Link>
           </li>
           <li>
-            <a href="#resume">Resume</a>
+            <Link
+              to="resume"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              active={activeSection === 'resume'}
+              onSetActive={handleSetActive}
+            >
+              Resume
+            </Link>
           </li>
         </ul>
       </nav>
@@ -27,4 +81,3 @@ const Header = () => {
 };
 
 export default Header;
-
