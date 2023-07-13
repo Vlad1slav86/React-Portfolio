@@ -1,39 +1,40 @@
 /* Contact.css */
-*{
-    
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
 }
-.contact-section {
-    padding: 20px;
-    background-color: #f2f2f2;
-   
-    display: flex;
-    align-items: center;
-  }
-  
-  .contact-content {
-    flex: 1;
-    
-    padding-left: 25px;
-  }
-  
-  .contact-section h2{
-    margin-right: 20px;
-  }
-  
-  .contact-content ul {
-    list-style: none;
-    padding: 30px;
-    border-left: 1px solid black;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    display: inline-block;
-    text-decoration: underline;
-    list-style-type: none;
-    margin-left: 15px;
-    font-size: 20px;
-  }
-  
-  
-  
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 120px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-submitted-message {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
