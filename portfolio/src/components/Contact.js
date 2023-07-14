@@ -1,86 +1,88 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import './style.css';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+
+  const handleBlur = (field) => {
+    setTouched((prevTouched) => ({ ...prevTouched, [field]: true }));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
-    // Prepare the form data
-    const formData = {
-      name,
-      email,
-      message,
-    };
-  
-    // Make an API call to submit the form data
-    fetch('/api/submit-contact-form', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Form submission successful
-          setFormSubmitted(true);
-        } else {
-          // Form submission failed
-          console.log('Form submission failed.');
-        }
-      })
-      .catch((error) => {
-        console.log('An error occurred while submitting the form:', error);
-      });
+
+    const validationErrors = {};
+
+    if (!name.trim()) {
+      validationErrors.name = 'Name is required';
+    }
+
+    if (!email.trim()) {
+      validationErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      validationErrors.email = 'Invalid email address';
+    }
+
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      console.log('Form submitted successfully');
+      // Perform form submission logic here
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
-  
 
   return (
     <section id="contact">
       <h2>Contact Me</h2>
-      {!formSubmitted ? (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      ) : (
-        <div className="form-submitted-message">
-          Thank you for your message! I'll get back to you soon.
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            onBlur={() => handleBlur('name')}
+            className={touched.name && !name.trim() ? 'error' : ''}
+          />
+          {touched.name && !name.trim() && <span className="error">Name is required</span>}
         </div>
-      )}
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            onBlur={() => handleBlur('email')}
+            className={touched.email && (!email.trim() || !/\S+@\S+\.\S+/.test(email)) ? 'error' : ''}
+          />
+          {touched.email && !email.trim() && <span className="error">Email is required</span>}
+          {touched.email && email.trim() && !/\S+@\S+\.\S+/.test(email) && (
+            <span className="error">Invalid email address</span>
+          )}
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+            onBlur={() => handleBlur('message')}
+            className={touched.message && !message.trim() ? 'error' : ''}
+          ></textarea>
+          {touched.message && !message.trim() && <span className="error">Message is required</span>}
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </section>
   );
 };

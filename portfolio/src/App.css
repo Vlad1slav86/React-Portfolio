@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+

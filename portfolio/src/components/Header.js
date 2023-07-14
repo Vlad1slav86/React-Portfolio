@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import React from 'react';
+import { Link, scroller } from 'react-scroll';
 import './Header.css';
+import './style.css';
 
-const Header = () => {
-  const [activeSection, setActiveSection] = useState('about');
-  const [initialLoad, setInitialLoad] = useState(true);
-
-  const handleSetActive = (section) => {
+const Header = ({ activeSection, setActiveSection }) => {
+  const handleLinkClick = (section) => {
     setActiveSection(section);
+    scroller.scrollTo(section, {
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: -70,
+    });
   };
-
-  useEffect(() => {
-    if (initialLoad) {
-      setActiveSection('about');
-      setInitialLoad(false);
-    }
-  }, [initialLoad]);
 
   return (
     <header>
@@ -30,7 +27,7 @@ const Header = () => {
               offset={-70}
               duration={500}
               active={activeSection === 'about'}
-              onSetActive={handleSetActive}
+              onClick={() => handleLinkClick('about')}
             >
               About Me
             </Link>
@@ -43,7 +40,7 @@ const Header = () => {
               offset={-70}
               duration={500}
               active={activeSection === 'portfolio'}
-              onSetActive={handleSetActive}
+              onClick={() => handleLinkClick('portfolio')}
             >
               Portfolio
             </Link>
@@ -56,7 +53,7 @@ const Header = () => {
               offset={-70}
               duration={500}
               active={activeSection === 'contact'}
-              onSetActive={handleSetActive}
+              onClick={() => handleLinkClick('contact')}
             >
               Contact
             </Link>
@@ -69,7 +66,7 @@ const Header = () => {
               offset={-70}
               duration={500}
               active={activeSection === 'resume'}
-              onSetActive={handleSetActive}
+              onClick={() => handleLinkClick('resume')}
             >
               Resume
             </Link>

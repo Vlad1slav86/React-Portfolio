@@ -1,53 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { Element } from 'react-scroll';
+import React, { useState } from 'react';
+import { Element, } from 'react-scroll';
 import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('about');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['about', 'portfolio', 'contact', 'resume'];
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 0;
-        }
-        return false;
-      });
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const handleSetActiveSection = (section) => {
+    setActiveSection(section);
+  };
 
   return (
     <div>
-      <Header activeSection={activeSection} />
+      <Header activeSection={activeSection} setActiveSection={handleSetActiveSection} />
       <Element name="about">
-        <About />
+        {activeSection === 'about' && <About />}
       </Element>
       <Element name="portfolio">
-        <Portfolio />
+        {activeSection === 'portfolio' && <Portfolio />}
       </Element>
       <Element name="contact">
-        <Contact />
+        {activeSection === 'contact' && <Contact />}
       </Element>
       <Element name="resume">
-        <Resume />
+        {activeSection === 'resume' && <Resume />}
       </Element>
+      <Footer />
     </div>
   );
 };
 
 export default App;
+
