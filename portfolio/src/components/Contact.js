@@ -31,8 +31,8 @@ const Contact = () => {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log('Form submitted successfully');
-      // Perform form submission logic here
+      alert('Form submitted successfully');
+      
       setName('');
       setEmail('');
       setMessage('');

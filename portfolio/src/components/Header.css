@@ -2,22 +2,55 @@
 
 header {
   
-  padding: 20px;
+height: 200px;
+  padding: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #007bff;
-  color:white;
+  background-color: #0353a9dc;
+  color: white;
+  background-image: url('../../public/images/coding.jpg');
+  background-size:cover;
+  background-position: center;
+
 }
 
-nav ul {
+ 
+
+/* nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   padding: 0;
-  
+
 }
 
 nav ul li {
   margin-right: 20px;
+} */
+
+header h1 {
+  display: inline-block;
+  font-size: 50px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
 }
 
 nav ul li a {

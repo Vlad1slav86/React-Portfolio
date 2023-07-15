@@ -1,5 +1,13 @@
 /* Portfolio.css */
 
+#portfolio h2 {
+  margin: 100px 200px 0px;
+  font-family: 'CustomFontSBI'
+  
+}
+
+
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -13,8 +21,8 @@
 }
 
 .project img {
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -36,3 +44,5 @@
 .project-links a:hover {
   text-decoration: underline;
 }
+
+

@@ -17,6 +17,7 @@ const Header = ({ activeSection, setActiveSection }) => {
   return (
     <header>
       <h1>Vlad Mladenov</h1>
+      
       <nav>
         <ul>
           <li>
@@ -29,7 +30,7 @@ const Header = ({ activeSection, setActiveSection }) => {
               active={activeSection === 'about'}
               onClick={() => handleLinkClick('about')}
             >
-              About Me
+              About
             </Link>
           </li>
           <li>
@@ -74,7 +75,9 @@ const Header = ({ activeSection, setActiveSection }) => {
         </ul>
       </nav>
     </header>
+    
   );
+ 
 };
 
 export default Header;

@@ -15,7 +15,7 @@ const Portfolio = () => {
       id: 2,
       image: '/images/Shape-Shift.png',
       name: 'Shape Shift',
-      deployedUrl: 'https://vlad1slav86.github.io/Weather-App/',
+      deployedUrl: 'https://shape-shift.herokuapp.com/',
       repoUrl: 'https://github.com/Vlad1slav86/Workout-Tracker',
     },
     {

@@ -50,4 +50,18 @@ body {
   
   /* Additional styles specific to each component */
   /* Add component-specific styles here */
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('../../public/Titillium_Web/TitilliumWeb-Bold.ttf') format('truetype');
+   
+    
+    /* Add additional src lines for other font file formats if available */
+    /* src: url('../fonts/CustomFont-Regular.woff') format('woff'); */
+    /* src: url('../fonts/CustomFont-Regular.woff2') format('woff2'); */
+    /* Add more font-face rules for different font weights and styles if needed */
+  }
+  
+  body {
+    font-family: 'CustomFont', sans-serif;
+  }
   
