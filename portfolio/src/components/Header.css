@@ -13,20 +13,6 @@ height: 200px;
 
 }
 
- 
-
-/* nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  padding: 0;
-
-}
-
-nav ul li {
-  margin-right: 20px;
-} */
-
 header h1 {
   display: inline-block;
   font-size: 50px;
@@ -36,7 +22,7 @@ header h1 {
 
 
 header nav {
-  padding-top: 15px;
+  padding-top: 35px;
   margin-right: 20px;
   float: right;
   font-size: 20px;
@@ -51,6 +37,7 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   margin-left: 25px;
+  
 }
 
 nav ul li a {
@@ -62,4 +49,9 @@ nav ul li a {
 
 nav ul li a.active {
   color: #ff6600;
+}
+
+nav ul li :hover {
+  color: rgb(54, 52, 52);
+  cursor: pointer;
 }
