@@ -22,7 +22,7 @@ const Portfolio = () => {
       id: 3,
       image: 'images/Note-Taker.png',
       name: 'Note Taker',
-      deployedUrl: 'https://vlad1slav86.github.io/Note-Taker/',
+      deployedUrl: 'https://mysterious-savannah-29869.herokuapp.com/notesLinks to an external site.',
       repoUrl: 'https://github.com/Vlad1slav86/Note-Taker',
     },
     {
