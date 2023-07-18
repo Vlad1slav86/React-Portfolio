@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.707639f6.css",
-    "main.js": "/React-Portfolio/static/js/main.6e529353.js",
-    "static/js/787.1ed0c42c.chunk.js": "/React-Portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/TitilliumWeb-Bold.ttf": "/React-Portfolio/static/media/TitilliumWeb-Bold.a267a8b6b783d7d62039.ttf",
-    "static/media/coding.jpg": "/React-Portfolio/static/media/coding.dbd9302b7341367acf97.jpg",
-    "index.html": "/React-Portfolio/index.html",
-    "main.707639f6.css.map": "/React-Portfolio/static/css/main.707639f6.css.map",
-    "main.6e529353.js.map": "/React-Portfolio/static/js/main.6e529353.js.map",
-    "787.1ed0c42c.chunk.js.map": "/React-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/static/css/main.c7063f67.css",
+    "main.js": "/static/js/main.58107367.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/TitilliumWeb-Bold.ttf": "/static/media/TitilliumWeb-Bold.a267a8b6b783d7d62039.ttf",
+    "static/media/coding.jpg": "/static/media/coding.dbd9302b7341367acf97.jpg",
+    "index.html": "/index.html",
+    "main.c7063f67.css.map": "/static/css/main.c7063f67.css.map",
+    "main.58107367.js.map": "/static/js/main.58107367.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.707639f6.css",
-    "static/js/main.6e529353.js"
+    "static/css/main.c7063f67.css",
+    "static/js/main.58107367.js"
   ]
 }
