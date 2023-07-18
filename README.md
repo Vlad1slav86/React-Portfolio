@@ -35,19 +35,19 @@ To run the portfolio app locally, follow these steps:
 
 Home Page:
 
-![Home Page](./portfolio/public/images/About.png)
+![Home Page](./public/images/About.png)
 
 Portfolio Page:
 
-![Portfolio Page](./portfolio/public/images/Portfolio.png)
+![Portfolio Page](./public/images/Portfolio.png.png)
 
 Contact Page:
 
-![Contact Page](./portfolio/public/images/Contact.png)
+![Contact Page](./public/images/Contact.png)
 
 Resume Page:
 
-![Resume Page](./portfolio/public/images/Resume.png)
+![Resume Page](./public/images/Resume.png)
 
 
 ## Links
