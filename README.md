@@ -39,7 +39,7 @@ Home Page:
 
 Portfolio Page:
 
-![Portfolio Page](./public/images/Portfolio.png.png)
+![Portfolio Page](./public/images/Portfolio.png)
 
 Contact Page:
 
