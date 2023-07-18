@@ -26,7 +26,9 @@
 
 .project-title {
   margin-top: 10px;
+  font-size: 25px;
   font-weight: bold;
+  color: #fff;
 }
 
 .project-links {

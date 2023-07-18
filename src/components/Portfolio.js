@@ -54,10 +54,10 @@ const Portfolio = () => {
       <div className="projects">
         {projects.map((project) => (
           <div key={project.id} className="project">
+            <div className="project-title">{project.name}</div>
             <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer">
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt={project.name} />
             </a>
-            <div className="project-title">{project.title}</div>
             <div className="project-links">
               <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer">Demo</a>
               <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
