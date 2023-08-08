@@ -22,7 +22,7 @@ const Portfolio = () => {
       id: 3,
       image: 'images/DocTalk.png',
       name: 'DocTalk',
-      deployedUrl: 'https://mysterious-savannah-29869.herokuapp.com/notesLinks to an external site.',
+      deployedUrl: 'https://mysterious-savannah-29869.herokuapp.com/',
       repoUrl: 'https://github.com/Vlad1slav86/DocTalk',
     },
     {
