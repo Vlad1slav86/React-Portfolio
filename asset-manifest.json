@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.6e59ea20.css",
-    "main.js": "/React-Portfolio/static/js/main.92d8dd01.js",
+    "main.css": "/React-Portfolio/static/css/main.8811a5cc.css",
+    "main.js": "/React-Portfolio/static/js/main.9ffcbdac.js",
     "static/js/787.1ed0c42c.chunk.js": "/React-Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/TitilliumWeb-Bold.ttf": "/React-Portfolio/static/media/TitilliumWeb-Bold.a267a8b6b783d7d62039.ttf",
     "static/media/coding.jpg": "/React-Portfolio/static/media/coding.dbd9302b7341367acf97.jpg",
     "index.html": "/React-Portfolio/index.html",
-    "main.6e59ea20.css.map": "/React-Portfolio/static/css/main.6e59ea20.css.map",
-    "main.92d8dd01.js.map": "/React-Portfolio/static/js/main.92d8dd01.js.map",
+    "main.8811a5cc.css.map": "/React-Portfolio/static/css/main.8811a5cc.css.map",
+    "main.9ffcbdac.js.map": "/React-Portfolio/static/js/main.9ffcbdac.js.map",
     "787.1ed0c42c.chunk.js.map": "/React-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e59ea20.css",
-    "static/js/main.92d8dd01.js"
+    "static/css/main.8811a5cc.css",
+    "static/js/main.9ffcbdac.js"
   ]
 }
